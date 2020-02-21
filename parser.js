@@ -12,6 +12,6 @@ const AST = babelParser.parse(code , {
 
 const astJSON = JSON.stringify(AST, null, 2);
 
-fs.writeFileSync('ast.json', astJSON, (error) => {
+fs.writeFileSync('./jsonrenderer/src/ast.json', astJSON, (error) => {
     console.log('Success!!');
 });
