@@ -24,7 +24,11 @@ function App() {
             placeholder="Type Your React Component"
             mode="javascript"
             theme="monokai"
-            name="blah2"
+            name="blah2" 
+            onLoad={(editor) => {
+              console.log(editor)
+              editor.getSession().setUseWorker(true)
+            }}
             onChange={(value) => {
               setValue(value);
               const astTree = babelParser.parse(value, {
@@ -34,8 +38,8 @@ function App() {
                   "flow"
                 ]
               });
-              console.log(astTree)
-              // setParsedAst(astTree);
+              // console.log(astTree)
+              setParsedAst(astTree);
             }}
             fontSize={14}
             style={{
