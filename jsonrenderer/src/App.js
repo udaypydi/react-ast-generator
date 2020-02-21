@@ -8,6 +8,7 @@ let data = require('./ast.json');
 function App() {
   return (
     <div className="App">
+      <h1>React Component AST</h1>
       <ReactJson src={data} />
     </div>
   );
