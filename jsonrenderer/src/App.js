@@ -8,8 +8,6 @@ import './App.css';
 const babelParser = require('@babel/parser');
 
 
-let data = require('./ast.json');
-
 function App() {
 
   const [value, setValue] = useState('');
@@ -31,15 +29,18 @@ function App() {
             }}
             onChange={(value) => {
               setValue(value);
-              const astTree = babelParser.parse(value, {
-                sourceType: "module",
-                plugins: [
-                  "jsx",
-                  "flow"
-                ]
-              });
-              // console.log(astTree)
-              setParsedAst(astTree);
+              try {
+                const astTree = babelParser.parse(value, {
+                  sourceType: "module",
+                  plugins: [
+                    "jsx",
+                    "flow"
+                  ]
+                });
+                setParsedAst(astTree);
+              } catch (err) {
+                console.log(err);
+              }
             }}
             fontSize={14}
             style={{
