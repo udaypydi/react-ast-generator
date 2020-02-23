@@ -5,6 +5,7 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import './App.css';
 
+// babel parser...
 const babelParser = require('@babel/parser');
 
 
@@ -12,7 +13,8 @@ function App() {
 
   const [value, setValue] = useState('');
   const [parsedAst, setParsedAst] = useState({});
-
+  const [error, setError] = useState('');
+  
   return (
     <div className="App">
       <h1>React Component AST</h1>
@@ -39,7 +41,7 @@ function App() {
                 });
                 setParsedAst(astTree);
               } catch (err) {
-                console.log(err);
+                setError(err.message);
               }
             }}
             fontSize={14}
@@ -59,11 +61,15 @@ function App() {
               tabSize: 2,
             }}
           />
+           {
+              error.length > 0 && (
+                <p>{error}</p>
+              )
+            }
         </div>
         <div className="App-JSON-container">
           <ReactJson src={parsedAst} />
         </div>
-       
       </div>
     </div>
   );
