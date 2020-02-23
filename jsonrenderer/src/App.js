@@ -61,11 +61,13 @@ function App() {
               tabSize: 2,
             }}
           />
-           {
+          <div className="App-Editor-Error">
+            {
               error.length > 0 && (
                 <p>{error}</p>
               )
             }
+          </div>
         </div>
         <div className="App-JSON-container">
           <ReactJson src={parsedAst} />

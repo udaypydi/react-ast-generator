@@ -52,6 +52,13 @@
   border: 1px solid #ccc;
 }
 
+.App-Editor-Error {
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+  background: #ffff;
+}
+
 .App-JSON-container {
   width: 50%;
   height: 100vh;
