@@ -39,7 +39,11 @@ function App() {
                   ]
                 });
                 setError('');
-                setParsedAst(astTree);
+                if (value.length) {
+                  setParsedAst(astTree);
+                } else {
+                  setParsedAst({});
+                }
               } catch (err) {
                 setError(err.message);
               }
