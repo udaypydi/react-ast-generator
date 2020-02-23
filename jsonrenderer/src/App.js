@@ -38,6 +38,7 @@ function App() {
                     "flow"
                   ]
                 });
+                setError('');
                 setParsedAst(astTree);
               } catch (err) {
                 setError(err.message);
@@ -60,13 +61,13 @@ function App() {
               tabSize: 2,
             }}
           />
-          <div className="App-Editor-Error">
             {
               error.length > 0 && (
-                <p>{error}</p>
+                <div className="App-Editor-Error">
+                  <p>{error}</p>
+                </div>
               )
             }
-          </div>
         </div>
         <div className="App-JSON-container">
           <ReactJson src={parsedAst} />
