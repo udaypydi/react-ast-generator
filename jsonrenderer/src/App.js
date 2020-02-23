@@ -3,6 +3,7 @@ import ReactJson from 'react-json-view';
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
+import Tab from './components/tab/tab.component';
 import './App.css';
 
 // babel parser...
@@ -47,7 +48,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React Component AST</h1>
+      <h1 style={{ padding: 0, margin: 0 }}>React Component AST</h1>
       <div className="App-container">
         <div className="App-Editor-Container">
           <AceEditor
@@ -79,6 +80,10 @@ function App() {
             }
         </div>
         <div className="App-JSON-container">
+          <Tab>
+            <div>JSON</div>
+            <div>TREE</div>
+          </Tab>
           <ReactJson src={parsedAst} />
         </div>
       </div>
