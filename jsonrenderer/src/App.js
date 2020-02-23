@@ -15,6 +15,36 @@ function App() {
   const [parsedAst, setParsedAst] = useState({});
   const [error, setError] = useState('');
   
+  const handleCodeChange = (value) => {
+    setValue(value);
+    try {
+      const astTree = babelParser.parse(value, {
+        sourceType: "module",
+        plugins: [
+          "jsx",
+          "flow"
+        ]
+      });
+      setError('');
+      if (value.length) {
+        setParsedAst(astTree);
+      } else {
+        setParsedAst({});
+      }
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+
+  const getEditorOptions = () => ({
+    enableBasicAutocompletion: true,
+    enableLiveAutocompletion: true,
+    enableSnippets: true,
+    showLineNumbers: true,
+    tabSize: 2,
+  });
+
   return (
     <div className="App">
       <h1>React Component AST</h1>
@@ -28,26 +58,7 @@ function App() {
             onLoad={(editor) => {
               editor.getSession().setUseWorker(true)
             }}
-            onChange={(value) => {
-              setValue(value);
-              try {
-                const astTree = babelParser.parse(value, {
-                  sourceType: "module",
-                  plugins: [
-                    "jsx",
-                    "flow"
-                  ]
-                });
-                setError('');
-                if (value.length) {
-                  setParsedAst(astTree);
-                } else {
-                  setParsedAst({});
-                }
-              } catch (err) {
-                setError(err.message);
-              }
-            }}
+            onChange={handleCodeChange}
             fontSize={14}
             style={{
               height: '100%',
@@ -57,13 +68,7 @@ function App() {
             showGutter={true}
             highlightActiveLine={true}
             value={value}
-            setOptions={{
-              enableBasicAutocompletion: true,
-              enableLiveAutocompletion: true,
-              enableSnippets: true,
-              showLineNumbers: true,
-              tabSize: 2,
-            }}
+            setOptions={getEditorOptions()}
           />
             {
               error.length > 0 && (
