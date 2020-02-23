@@ -72,3 +72,14 @@
   text-align: left;
   padding: 10px;
 }
+
+.App-JSON-Tab-Element {
+  padding: 10px;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.App-JSON-Tab-Element__active {
+  background: #ccc;
+  color: white;
+}

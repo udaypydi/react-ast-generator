@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactJson from 'react-json-view';
 import AceEditor from "react-ace";
+import classnames from 'classnames';
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import Tab from './components/tab/tab.component';
@@ -15,6 +16,7 @@ function App() {
   const [value, setValue] = useState('');
   const [parsedAst, setParsedAst] = useState({});
   const [error, setError] = useState('');
+  const [activeElement, setActiveElement] = useState('JSON');
   
   const handleCodeChange = (value) => {
     setValue(value);
@@ -81,10 +83,32 @@ function App() {
         </div>
         <div className="App-JSON-container">
           <Tab>
-            <div>JSON</div>
-            <div>TREE</div>
+            <div 
+              className={classnames(
+                "App-JSON-Tab-Element",
+                {
+                  "App-JSON-Tab-Element__active": activeElement === 'JSON',
+                },
+              )   
+              }
+              onClick={() => setActiveElement('JSON')}
+            >JSON</div>
+            <div 
+              className={classnames(
+                "App-JSON-Tab-Element",
+                {
+                  "App-JSON-Tab-Element__active": activeElement === 'TREE',
+                },
+              )   
+              }
+              onClick={() => setActiveElement('TREE')}
+            >TREE</div>
           </Tab>
-          <ReactJson src={parsedAst} />
+          {
+            activeElement === 'JSON' && (
+              <ReactJson src={parsedAst} />
+            )
+          }  
         </div>
       </div>
     </div>

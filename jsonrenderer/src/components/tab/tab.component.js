@@ -7,7 +7,7 @@ const Tab = (props) => {
     return (
         <div className={classnames("Tab-Container", props.className)}>
             {
-                React.Children.map(child => <div>{child}</div>)
+                React.Children.map(props.children, child => <div>{child}</div>)
             }
         </div>
     )
@@ -15,6 +15,7 @@ const Tab = (props) => {
 
 Tab.propTypes = {
     className: PropTypes.string,
+    children: PropTypes.node,
 };
 
 export default Tab;
