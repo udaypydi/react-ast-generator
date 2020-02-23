@@ -26,7 +26,6 @@ function App() {
             theme="monokai"
             name="blah2" 
             onLoad={(editor) => {
-              console.log(editor)
               editor.getSession().setUseWorker(true)
             }}
             onChange={(value) => {

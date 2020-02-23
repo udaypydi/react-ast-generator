@@ -57,6 +57,11 @@
   bottom: 0;
   z-index: 99999;
   background: #ffff;
+  width: 48%;
+  text-align:left;
+  padding-left: 20px;
+  border: 1px solid red;
+  color: red;
 }
 
 .App-JSON-container {
