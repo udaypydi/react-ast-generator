@@ -90,4 +90,5 @@
   margin-top: 10px;
   border: 1px solid #ccc;
   height: 100vh;
+  overflow: scroll;
 }
