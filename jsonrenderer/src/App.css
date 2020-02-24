@@ -80,8 +80,10 @@
 }
 
 .App-JSON-Tab-Element__active {
-  background: #ccc;
-  color: white;
+  background: #559CAD;
+  color: #ffffff;
+  border: 1px solid #559CAD;
+  font-weight: bold;
 }
 
 .App-JSON-View {
