@@ -104,7 +104,7 @@ function App() {
               onClick={() => setActiveElement('TREE')}
             >TREE</div>
           </Tab>
-          <div style={{ marginTop: 10, border: '1px solid #ccc' }}>
+          <div className="App-JSON-View">
           {
             activeElement === 'JSON' && (
               <ReactJson src={parsedAst} />

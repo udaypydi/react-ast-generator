@@ -83,3 +83,9 @@
   background: #ccc;
   color: white;
 }
+
+.App-JSON-View {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  height: 100vh;
+}
