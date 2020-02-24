@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import Tab from './components/tab/tab.component';
+import TreeView from './components/treeview/treeview.component';
 import './App.css';
 
 // babel parser...
@@ -105,12 +106,18 @@ function App() {
             >TREE</div>
           </Tab>
           <div className="App-JSON-View">
-          {
-            activeElement === 'JSON' && (
-              <ReactJson src={parsedAst} />
-            )
-          }  
+            {
+              activeElement === 'JSON' && (
+                <ReactJson src={parsedAst} />
+              )
+            } 
+            {
+              activeElement === 'TREE' && (
+                <TreeView />
+              )
+            }
           </div>
+          
         </div>
       </div>
     </div>

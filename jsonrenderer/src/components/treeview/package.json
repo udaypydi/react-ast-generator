@@ -1,0 +1,5 @@
+{
+    "name": "TreeView",
+    "component": "./treeview.component.js",
+    "version": "0.0.0"
+}
