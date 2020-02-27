@@ -1,7 +1,7 @@
 {
   "name": "react-ast-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A graphical view of Abstract Syntax Tree of react components",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
