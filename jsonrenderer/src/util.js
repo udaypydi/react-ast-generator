@@ -1,3 +1,8 @@
+/**
+ * Parse abstract syntax tree from JSON AST
+ * @param {JSON} ast 
+ * 
+ */
 export const parseAST = ast => {
     const astKeys = Object.keys(ast);
     if (astKeys.indexOf("program") !== -1) {
