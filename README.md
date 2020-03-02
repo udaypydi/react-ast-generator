@@ -4,4 +4,4 @@ A simple AST generator for react components. Helps in better understanding of re
 
 Using the AST generator, we can tokenize React Components. This project comes with a code editor and it generates AST on the fly.
 
-It has both JSON view and Tree view. 
+It has both JSON view and Graphical view Of React Component and data flow. 
