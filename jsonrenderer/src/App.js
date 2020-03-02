@@ -6,6 +6,7 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import Tab from './components/tab/tab.component';
 import TreeView from './components/treeview/treeview.component';
+import { parseAST } from './util';
 import './App.css';
 
 // babel parser...
@@ -29,6 +30,7 @@ function App() {
           "flow"
         ]
       });
+      parseAST(astTree);
       setError('');
       if (value.length) {
         setParsedAst(astTree);
