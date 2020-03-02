@@ -2,12 +2,12 @@
   "name": "react-ast-generator",
   "version": "1.0.0",
   "description": "A graphical view of Abstract Syntax Tree of react components",
+  "author": "Uday Bhaskhar",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Uday Bhaskhar",
   "license": "ISC",
   "dependencies": {
     "@babel/parser": "^7.8.4",
