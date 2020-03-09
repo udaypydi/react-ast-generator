@@ -8,7 +8,6 @@ export const parseAST = ast => {
     if (astKeys.indexOf("program") !== -1) {
         parseAST(ast["program"]);
     } else if (astKeys.indexOf("body") !== -1) {
-        console.log(ast['body']);
         parseAST(ast["body"]);
     } else if (astKeys.indexOf("value") !== -1) {
         console.log(ast['value']);
