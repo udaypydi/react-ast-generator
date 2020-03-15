@@ -3,7 +3,8 @@
  * @param {JSON} ast 
  * 
  */
-export const parseAST = ast => {
+
+export const parseAST = (ast) => {
     const astKeys = Object.keys(ast);
     console.log(astKeys);
     if (Array.isArray(ast)) {
