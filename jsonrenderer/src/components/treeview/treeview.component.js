@@ -31,7 +31,7 @@ const TreeView = (props) => {
     return (
         <div>
             <div id="treeWrapper" style={{width: '50em', height: '20em'}}>
-                <Tree data={ast} />
+                <Tree data={myTreeData} />
             </div>
         </div>
     )
