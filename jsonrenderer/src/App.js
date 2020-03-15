@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactJson from 'react-json-view';
 import AceEditor from "react-ace";
 import classnames from 'classnames';
@@ -9,17 +9,34 @@ import TreeView from './components/treeview/treeview.component';
 import { parseAST } from './util';
 import './App.css';
 
+
+const placeholderCode = `
+import React from 'react';
+
+class AstGenerator extends React.Component {
+  render() {
+    return (
+      <p>Welcome!!</p>
+    )
+  }
+}
+`;
+
 // babel parser...
 const babelParser = require('@babel/parser');
 
 
 function App() {
 
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(placeholderCode);
   const [parsedAst, setParsedAst] = useState({});
   const [error, setError] = useState('');
   const [activeElement, setActiveElement] = useState('JSON');
   
+  useEffect(() => {
+    handleCodeChange(placeholderCode);
+  }, []);
+
   const handleCodeChange = (value) => {
     setValue(value);
     try {
