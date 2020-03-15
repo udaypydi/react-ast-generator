@@ -1,22 +1,44 @@
 export const myTreeData = [
     {
-      name: 'Top Level',
+      name: 'File',
       attributes: {
-        keyA: 'val A',
-        keyB: 'val B',
-        keyC: 'val C',
+        start: 0,
+        end: 135,
       },
       children: [
         {
-          name: 'Level 2: A',
+          name: 'Program',
           attributes: {
-            keyA: 'val A',
-            keyB: 'val B',
-            keyC: 'val C',
+            start: 0,
+            end: 135,
+
           },
-        },
-        {
-          name: 'Level 2: B',
+          children: [
+              {
+                  name: 'Import Declaration',
+                  attributes: {
+                      start: 19,
+                      end: 26,
+                      value: 'react'
+                  }
+              },
+              {
+                  name: 'ClassDeclaration',
+                  attributes: {
+                      start: 29,
+                      end: 134
+                  },
+                  children: [
+                      { 
+                        name: 'ClassBody',
+                        attributes: {
+                            start: 72,
+                            end: 134
+                        }
+                      }
+                  ]
+              }
+          ]
         },
       ],
     },
