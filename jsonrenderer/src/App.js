@@ -132,7 +132,7 @@ function App() {
             } 
             {
               activeElement === 'TREE' && (
-                <TreeView />
+                <TreeView ast={value}/>
               )
             }
           </div>
