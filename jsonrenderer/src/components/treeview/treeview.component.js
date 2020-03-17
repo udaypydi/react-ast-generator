@@ -18,6 +18,7 @@ const TreeView = (props) => {
                 <Tree 
                   data={myTreeData} 
                   collapsible
+                  initialDepth={2}
                 />
             </div>
         </div>
