@@ -9,12 +9,9 @@ const TreeView = (props) => {
   const [translate, setTranslate] = useState({});
   useEffect(() => {
     const dimensions = treeRef.current.getBoundingClientRect();
-
     setTranslate({
-      translate: {
         x: dimensions.width / 2,
-        y: dimensions.height / 2
-      }
+        y: 1,
     });
   }, []);
 
@@ -23,9 +20,8 @@ const TreeView = (props) => {
             <div 
               id="treeWrapper" 
               style={{
-                width: '50em', 
-                height: '100em',
-                padding: 20
+                width: '100%',
+                height: '100vh'
               }}
               ref={treeRef}
             >
