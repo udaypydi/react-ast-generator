@@ -5,6 +5,11 @@ export const myTreeData = [
         start: 0,
         end: 135,
       },
+      nodeSvgShape: {
+        shapeProps: {
+          fill: 'blue',
+        },
+      },
       children: [
         {
           name: 'Program',

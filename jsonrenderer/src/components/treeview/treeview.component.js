@@ -12,13 +12,15 @@ const TreeView = (props) => {
               id="treeWrapper" 
               style={{
                 width: '50em', 
-                height: '20em'
+                height: '100em',
+                textAlign: 'center'
               }}
             >
                 <Tree 
                   data={myTreeData} 
                   collapsible
                   initialDepth={2}
+                  orientation={'vertical'}
                 />
             </div>
         </div>
