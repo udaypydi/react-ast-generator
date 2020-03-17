@@ -15,7 +15,10 @@ const TreeView = (props) => {
                 height: '20em'
               }}
             >
-                <Tree data={myTreeData} />
+                <Tree 
+                  data={myTreeData} 
+                  collapsible
+                />
             </div>
         </div>
     );
