@@ -4,11 +4,12 @@
  * format of every node 
  * Node {
  *  name: String,
- * attributes: {
- *  start: Number,
- *  end: Number,
- *  valur: String,
- * }
+ *  attributes: {
+ *      start: Number,
+ *      end: Number,
+ *      value: String,
+ *  },
+ * children: Array<Node>
  * }
  */
 
