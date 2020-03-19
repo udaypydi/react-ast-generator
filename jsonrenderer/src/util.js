@@ -1,7 +1,15 @@
 /**
  * Parse abstract syntax tree from JSON AST
  * @param {JSON} ast 
- * 
+ * format of every node 
+ * Node {
+ *  name: String,
+ * attributes: {
+ *  start: Number,
+ *  end: Number,
+ *  valur: String,
+ * }
+ * }
  */
 
 export const parseAST = (ast) => {
