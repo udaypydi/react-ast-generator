@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Tree from 'react-d3-tree';
- import { myTreeData }  from './treeview.constant';
 
 
 const TreeView = (props) => {
