@@ -26,7 +26,7 @@ const TreeView = (props) => {
               ref={treeRef}
             >
                 <Tree 
-                  data={myTreeData} 
+                  data={ast} 
                   translate={translate} 
                   orientation={'vertical'}
                 />
