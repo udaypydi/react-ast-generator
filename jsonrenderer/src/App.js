@@ -30,6 +30,7 @@ function App() {
 
   const [value, setValue] = useState(placeholderCode);
   const [parsedAst, setParsedAst] = useState({});
+  const [treeData, setTreeData] = useState({});
   const [error, setError] = useState('');
   const [activeElement, setActiveElement] = useState('JSON');
   
@@ -47,7 +48,7 @@ function App() {
           "flow"
         ]
       });
-      parseAST(astTree);
+      setTreeData(parseAST(astTree));
       setError('');
       if (value.length) {
         setParsedAst(astTree);
@@ -132,7 +133,7 @@ function App() {
             } 
             {
               activeElement === 'TREE' && (
-                <TreeView ast={value}/>
+                <TreeView ast={treeData}/>
               )
             }
           </div>
