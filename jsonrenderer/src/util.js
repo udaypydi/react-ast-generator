@@ -19,9 +19,6 @@
 
 
 export const parseAST = (ast, prevKey = '') => {
-
-    // parse every key in ast to form a d3 tree json.
-
     const astKeys = Object.keys(ast);
     if (Array.isArray(ast)) {
         ast.forEach(element => {
