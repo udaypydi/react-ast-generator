@@ -22,7 +22,6 @@ export const parseAST = (ast, prevKey = '') => {
 
     // parse every key in ast to form a d3 tree json.
 
-    console.log(treeData);
     const astKeys = Object.keys(ast);
     if (Array.isArray(ast)) {
         ast.forEach(element => {
@@ -56,4 +55,5 @@ export const parseAST = (ast, prevKey = '') => {
             console.log(ast['value']);
         }
     }
+    return treeData;
 }
