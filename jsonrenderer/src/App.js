@@ -28,12 +28,14 @@ const babelParser = require('@babel/parser');
 
 function App() {
 
+
   const [value, setValue] = useState(placeholderCode);
   const [parsedAst, setParsedAst] = useState({});
   const [treeData, setTreeData] = useState({});
   const [error, setError] = useState('');
   const [activeElement, setActiveElement] = useState('JSON');
-  
+  let timer = null;
+
   useEffect(() => {
     handleCodeChange(placeholderCode);
   }, []);
@@ -83,7 +85,12 @@ function App() {
               editor.getSession().setUseWorker(true)
             }}
             onChange={(value) => {
-              handleCodeChange(value);
+              if (timer) {
+                clearTimeout(timer);
+              }
+              timer = setTimeout(() => {
+                handleCodeChange(value);
+              }, 1000);
             }}
             fontSize={14}
             style={{
