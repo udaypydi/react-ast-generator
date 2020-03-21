@@ -19,7 +19,6 @@
 
 
 export const parseAST = (ast, prevKey = '') => {
-    console.log(ast);
     const astKeys = Object.keys(ast);
     if (Array.isArray(ast)) {
         ast.forEach(element => {
