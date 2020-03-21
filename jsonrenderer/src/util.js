@@ -19,6 +19,7 @@
 
 
 export const parseAST = (ast, prevKey = '') => {
+    console.log(ast);
     const astKeys = Object.keys(ast);
     if (Array.isArray(ast)) {
         ast.forEach(element => {
@@ -34,7 +35,7 @@ export const parseAST = (ast, prevKey = '') => {
                 }
             });
         } else {
-            treeData = {
+            treeData = { 
                 name: ast.type,
                 attributes: {
                     start: ast.start,

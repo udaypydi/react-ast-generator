@@ -82,7 +82,9 @@ function App() {
             onLoad={(editor) => {
               editor.getSession().setUseWorker(true)
             }}
-            onChange={handleCodeChange}
+            onChange={(value) => {
+              handleCodeChange(value);
+            }}
             fontSize={14}
             style={{
               height: '100%',
