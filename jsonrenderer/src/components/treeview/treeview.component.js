@@ -10,7 +10,7 @@ const TreeView = (props) => {
     const dimensions = treeRef.current.getBoundingClientRect();
     setTranslate({
         x: dimensions.width / 2,
-        y: 1,
+        y: dimensions.height / 2,
     });
   }, []);
 
