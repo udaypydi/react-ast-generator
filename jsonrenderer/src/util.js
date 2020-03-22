@@ -1,5 +1,5 @@
 /**
- * Parse abstract syntax tree from JSON AST
+ * Parse abstract syntax tree from JSON AST using recursive algorithm.
  * @param {JSON} ast 
  * @param {String} key
  * @param {Object} tree
