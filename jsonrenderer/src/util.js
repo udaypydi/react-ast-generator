@@ -1,6 +1,8 @@
 /**
  * Parse abstract syntax tree from JSON AST
  * @param {JSON} ast 
+ * @param {String} key
+ * @param {Object} tree
  * format of every node 
  * Node {
  *  name: String,
