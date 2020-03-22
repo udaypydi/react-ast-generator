@@ -50,6 +50,8 @@ function App() {
           "flow"
         ]
       });
+
+      console.log(JSON.stringify(astTree));
       setTreeData(parseAST(astTree));
       setError('');
       if (value.length) {
