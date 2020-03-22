@@ -13,14 +13,11 @@
  * }
  */
 
- let treeData = {
-     children: [],
- };
-
-
-export const parseAST = (ast, prevKey = '', tree = {
+const initialTreeState = {
     children: [],
-}) => {
+};
+
+export const parseAST = (ast, prevKey = '', tree = initialTreeState) => {
     const astKeys = Object.keys(ast);
     if (Array.isArray(ast)) {
         ast.forEach(element => {
