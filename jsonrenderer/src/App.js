@@ -7,20 +7,9 @@ import "ace-builds/src-noconflict/theme-monokai";
 import Tab from './components/tab/tab.component';
 import TreeView from './components/treeview/treeview.component';
 import { parseAST } from './util';
+import { PLACEHOLDER_CODE } from './App.constant';
 import './App.css';
 
-
-const placeholderCode = `
-import React from 'react';
-
-class AstGenerator extends React.Component {
-  render() {
-    return (
-      <p>Welcome!!</p>
-    )
-  }
-}
-`;
 
 // babel parser...
 const babelParser = require('@babel/parser');
@@ -29,7 +18,7 @@ const babelParser = require('@babel/parser');
 function App() {
 
 
-  const [value, setValue] = useState(placeholderCode);
+  const [value, setValue] = useState(PLACEHOLDER_CODE);
   const [parsedAst, setParsedAst] = useState({});
   const [treeData, setTreeData] = useState({});
   const [error, setError] = useState('');
@@ -37,7 +26,7 @@ function App() {
   let timer = null;
 
   useEffect(() => {
-    handleCodeChange(placeholderCode);
+    handleCodeChange(PLACEHOLDER_CODE);
   }, []);
 
   const handleCodeChange = (value) => {
