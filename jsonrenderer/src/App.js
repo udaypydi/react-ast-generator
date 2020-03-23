@@ -3,7 +3,7 @@ import ReactJson from 'react-json-view';
 import AceEditor from "react-ace";
 import classnames from 'classnames';
 import "ace-builds/src-noconflict/mode-java";
-import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-monokai";
 import Tab from './components/tab/tab.component';
 import TreeView from './components/treeview/treeview.component';
 import { parseAST } from './util';
