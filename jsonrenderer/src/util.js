@@ -46,9 +46,9 @@ export const parseAST = (ast, prevKey = '', tree = initialTreeState) => {
         }
     
         if (astKeys.indexOf("program") !== -1) {
-            parseAST(ast["program"], 'program', tree);
+            return parseAST(ast["program"], 'program', tree['program']);
         } else if (astKeys.indexOf("body") !== -1) {
-            parseAST(ast["body"], 'body', tree);
+            return parseAST(ast["body"], 'body', tree['body']);
         } else if (astKeys.indexOf("value") !== -1) {
             console.log(ast['value']);
         }
