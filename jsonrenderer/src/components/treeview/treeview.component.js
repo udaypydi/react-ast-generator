@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Tree from 'react-d3-tree';
 
+// Render ast data in the form of tree 
 
 const TreeView = (props) => {
   const { ast } = props;
