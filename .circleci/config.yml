@@ -11,7 +11,8 @@ jobs:
           steps:
             - run: cd jsonrenderer
             - run: yarn
-            - run: tree
+            - run: ls -la
+            - run: cd jsonrenderer
             - run: npm run build
 workflows:
     build-and-test:
