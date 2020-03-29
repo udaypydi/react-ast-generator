@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd jsonrenderer && npm run build"
+    "build": "cd jsonrenderer && yarn && npm run build"
   },
   "keywords": [],
   "license": "ISC",
