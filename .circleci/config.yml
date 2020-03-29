@@ -9,6 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run: cd jsonrenderer
             - run: npm install
             - run: npm run build
 workflows:
