@@ -9,4 +9,4 @@ It has both JSON view and Graphical view Of React Component and data flow.
 
 Babel Parser used for tree parsing.
 
-React D3 Tree used to render tree.
+React D3 Tree used to render tree. Tree view generator using d3 view.
