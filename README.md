@@ -12,3 +12,6 @@ Babel Parser used for tree parsing.
 React D3 Tree used to render tree. Tree view generator using d3 view.
 
 Live preview generator usin React D3.
+
+cache dom renering for faster dom manipulations.
+
